@@ -24,8 +24,6 @@ RUN useradd -ms /bin/bash -d ${POC_ROOT} -G sudo ${POC_USER}
 RUN chown -R ${POC_USER}.${POC_USER} ${POC_ROOT}
 
 COPY main.py ${POC_HOME}/main.py
-COPY scripts/entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
 
 EXPOSE 8080
 
