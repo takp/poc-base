@@ -7,5 +7,6 @@ This is base repository for PoC code.
 ```
 $ git clone git@github.com:takp/poc-base.git
 $ cd poc-base
+$ cp .env.sample .env
 $ python main.py
 ```
