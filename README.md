@@ -7,6 +7,5 @@ This is base repository for PoC code.
 ```
 $ git clone git@github.com:takp/poc-base.git
 $ cd poc-base
-$ docker build -t poc_base .
-$ docker run -it poc_base bash
+$ python main.py
 ```

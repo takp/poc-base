@@ -1,5 +1,7 @@
 from framework import settings, Logger
 
+DATA_PATH = "./data/"
+
 
 def execute():
     logger = Logger()
