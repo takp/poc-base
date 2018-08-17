@@ -1,17 +1,17 @@
-from framework import Context
-from app import main
+from framework import Context, ArgumentParser
+from app import main, ArgumentParser
 
 
-def before_execute(context: Context):
+def before_execute(context: Context) -> None:
     context.logger.debug("Start processing...")
 
 
-def execute(context: Context):
-    """Add you code here."""
-    main.execute(context)
+def execute(context: Context) -> None:
+    args = ArgumentParser().parse()
+    main.execute(context, args)
 
 
-def after_execute(context: Context):
+def after_execute(context: Context) -> None:
     context.logger.debug("Finished.")
 
 
