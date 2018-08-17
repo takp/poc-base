@@ -1,14 +1,22 @@
-from framework import settings, Logger
+from framework import Context
+from app import main
 
-DATA_PATH = "./data/"
+
+def before_execute(context: Context):
+    context.logger.debug("Start processing...")
 
 
-def execute():
-    logger = Logger()
-    password = settings.get("SAMPLE_PASSWORD")
-    logger.debug("Password: {}".format(password))
-    logger.info("Completed")
+def execute(context: Context):
+    """Add you code here."""
+    main.execute(context)
+
+
+def after_execute(context: Context):
+    context.logger.debug("Finished.")
 
 
 if __name__ == "__main__":
-    execute()
+    context = Context()
+    before_execute(context)
+    execute(context)
+    after_execute(context)

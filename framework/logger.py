@@ -2,7 +2,7 @@ import logging
 import time
 
 
-class Logger():
+class Logger(object):
     def __init__(self):
         self.start_time = time.time()
         logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
