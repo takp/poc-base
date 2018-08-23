@@ -9,6 +9,7 @@ This is base repository for PoC code.
 ```bash
 $ git clone git@github.com:takp/poc-base.git
 $ cd poc-base
+$ pip install -r requirements.txt
 $ cp .env.sample .env
 ```
 
