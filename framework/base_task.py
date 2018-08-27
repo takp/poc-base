@@ -6,7 +6,8 @@ DATA_PATH = "data/"
 
 class BaseTask(object):
     """
-    Don't edit here. Add your code to `app/task.py`.
+    Abstract task class.
+    Please add your concrete code to concrete task class: `app/task.py`.
     """
 
     def __init__(self):
